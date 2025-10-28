@@ -73,6 +73,7 @@ function sortDirectives(a: HasElement, b: HasElement) {
     '[attr.aria-multiselectable]': '_pattern.multi()',
     '[attr.aria-disabled]': '_pattern.disabled()',
     '[attr.aria-activedescendant]': '_pattern.activedescendant()',
+    '[class.ng-rtl]': 'textDirection() === "rtl"',
     '[tabindex]': '_pattern.tabindex()',
     '(keydown)': '_pattern.onKeydown($event)',
     '(pointerdown)': '_pattern.onPointerdown($event)',

@@ -464,7 +464,13 @@ export class MatSelectionList
    */
   private _setActiveOption(index: number) {
     this._items.forEach((item, itemIndex) => {
-      item._setTabindex(this.disabled ? -1 : itemIndex === index ? 0 : -1);
+      let tabindex = -1;
+
+      if (!this.disabled && itemIndex === index) {
+        tabindex = 0;
+      }
+
+      item._setTabindex(tabindex);
     });
     this._keyManager.updateActiveItem(index);
   }

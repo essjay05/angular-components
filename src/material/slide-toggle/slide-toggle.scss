@@ -489,6 +489,12 @@ $fallbacks: m3-slide-toggle.get-tokens();
   // Remove the native outline since we use the ripple for focus indication.
   outline: 0;
 
+  & .mat-icon {
+    // stylelint-disable material/no-prefixes
+    min-height: fit-content;
+    flex-shrink: 0;
+  }
+
   // The ripple needs extra specificity so the base ripple styling doesn't override its `position`.
   .mat-mdc-slide-toggle-ripple,
   .mdc-switch__ripple::after {

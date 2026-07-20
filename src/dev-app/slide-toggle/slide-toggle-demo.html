@@ -22,6 +22,21 @@
     >No icon</mat-slide-toggle
   >
 
+  <p>With icon as part of the label.</p>
+
+  <mat-slide-toggle [(ngModel)]="firstToggle">
+    <span class="demo-slide-toggle-label-with-icon">
+      <mat-icon>notifications</mat-icon>
+      Notifications
+    </span>
+  </mat-slide-toggle>
+  <mat-slide-toggle labelPosition="before" [(ngModel)]="firstToggle">
+    <span class="demo-slide-toggle-label-with-icon">
+      <mat-icon>volume_up</mat-icon>
+      Sounds
+    </span>
+  </mat-slide-toggle>
+
   <p>With no label.</p>
 
   <mat-slide-toggle aria-label="Toggle only" hideLabel color="primary" [(ngModel)]="firstToggle" />
